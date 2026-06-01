@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { AmbientBackground } from "@/components/ui/ambient-background";
 import { Nav } from "@/components/layout/nav";
 import { Footer } from "@/components/layout/footer";
 import { site } from "@/lib/data/site";
@@ -38,11 +37,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} dark h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="relative min-h-full bg-ink-950 text-ink-50 selection:bg-emerald-300 selection:text-ink-950">
-        <AmbientBackground variant="page" />
-        <div className="grain-overlay" aria-hidden />
+      <body className="relative min-h-full bg-white text-ink-950 selection:bg-emerald-400 selection:text-white">
         <Nav />
         <main className="relative z-10">{children}</main>
         <Footer />
