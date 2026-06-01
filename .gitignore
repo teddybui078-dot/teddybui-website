@@ -31,3 +31,5 @@ next-env.d.ts
 
 # agent skills tooling (not part of the site)
 .agents/
+/homepage-refrence.png
+/meridianlabs-ui-homepage-design.png
