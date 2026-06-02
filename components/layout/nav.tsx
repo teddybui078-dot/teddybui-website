@@ -40,8 +40,7 @@ export function Nav() {
               key={l.href}
               href={l.href}
               className={cn(
-                "relative rounded-full px-3.5 py-1.5 text-[13px] transition-colors",
-                isActive(l.href) ? "text-white" : "text-white/80 hover:text-white",
+                "relative rounded-full px-3.5 py-1.5 text-[13px] text-white transition-colors",
               )}
             >
               {isActive(l.href) && (
