@@ -11,6 +11,9 @@ import { Logo } from "./logo";
 export function Nav() {
   const pathname = usePathname();
 
+  // The immersive home renders its own full-width nav.
+  if (pathname === "/") return null;
+
   function isActive(href: string) {
     return href === "/" ? pathname === "/" : pathname.startsWith(href);
   }
