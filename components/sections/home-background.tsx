@@ -1,6 +1,9 @@
+import { FallingPattern } from "@/components/ui/falling-pattern";
+
 /**
  * Full-page background for the home route. Fixed behind all content: a clean
- * white→green vertical gradient with a faint grid, blending into the footer.
+ * white→green vertical gradient with a faint grid, plus a *weak* falling-pattern
+ * animation layered on top. Blends into the footer.
  */
 export function HomeBackground() {
   return (
@@ -20,6 +23,15 @@ export function HomeBackground() {
           WebkitMaskImage:
             "radial-gradient(125% 100% at 50% 28%, black 32%, transparent 88%)",
         }}
+      />
+      {/* weak falling streaks — transparent base, low opacity, slow, centre kept clear */}
+      <FallingPattern
+        className="absolute inset-0 h-full w-full opacity-[0.18] [mask-image:radial-gradient(75%_65%_at_50%_40%,transparent_0%,#000_78%)] [-webkit-mask-image:radial-gradient(75%_65%_at_50%_40%,transparent_0%,#000_78%)]"
+        color="#1cbf65"
+        backgroundColor="transparent"
+        duration={180}
+        blurIntensity="0px"
+        density={2}
       />
     </div>
   );
