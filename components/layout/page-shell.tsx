@@ -1,30 +1,21 @@
 import * as React from "react";
 import { Reveal } from "@/components/ui/scroll-reveal";
-import { cn } from "@/lib/utils";
 
 /**
  * Minimal header for inner pages: a bold title and a small muted subtitle.
- * Body content is passed as children. Pass `center` to centre the header and
- * text (each page still centres its own content blocks with `mx-auto`).
+ * Body content is passed as children.
  */
 export function PageShell({
   title,
   subtitle,
-  center,
   children,
 }: {
   title: React.ReactNode;
   subtitle?: React.ReactNode;
-  center?: boolean;
   children: React.ReactNode;
 }) {
   return (
-    <div
-      className={cn(
-        "mx-auto w-full max-w-[1100px] px-6 pb-28 pt-32 md:pt-40",
-        center && "text-center"
-      )}
-    >
+    <div className="mx-auto w-full max-w-[1100px] px-6 pb-28 pt-32 md:pt-40">
       <header>
         <Reveal>
           <h1 className="text-3xl font-semibold tracking-tight text-ink-950 md:text-4xl">

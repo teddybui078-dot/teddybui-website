@@ -16,8 +16,8 @@ const INTRO = [
 
 export default function AboutPage() {
   return (
-    <PageShell title="About" center>
-      <div className="mx-auto max-w-[640px] space-y-6">
+    <PageShell title="About">
+      <div className="max-w-[600px] space-y-6">
         {INTRO.map((para, i) => (
           <Reveal key={i} delay={0.04 * i}>
             <p className="text-lg leading-relaxed text-ink-700">{para}</p>
@@ -26,7 +26,7 @@ export default function AboutPage() {
 
         {/* macOS-window photo card */}
         <Reveal delay={0.12}>
-          <figure className="mx-auto mt-10 max-w-[420px] overflow-hidden rounded-2xl border border-ink-950/10 bg-ink-950 text-left shadow-[0_30px_70px_-30px_rgba(10,13,16,0.5)]">
+          <figure className="mt-10 max-w-[380px] overflow-hidden rounded-2xl border border-ink-950/10 bg-ink-950 shadow-[0_30px_70px_-30px_rgba(10,13,16,0.5)]">
             <figcaption className="grid grid-cols-[1fr_auto_1fr] items-center border-b border-white/10 px-4 py-3">
               <div className="flex items-center gap-2">
                 <span className="size-3 rounded-full bg-[#ff5f57]" />
