@@ -198,7 +198,9 @@ export default function RadialOrbitalTimeline({
             )}
           </div>
 
-          <div className="absolute w-96 h-96 rounded-full border border-ink-950/10"></div>
+          {/* Diameter must equal the node orbit radius (200) * 2 so node
+              centers always sit exactly on this line, not drifting off it. */}
+          <div className="absolute w-[400px] h-[400px] rounded-full border border-ink-950/10"></div>
 
           {timelineData.map((item, index) => {
             const position = calculateNodePosition(index, timelineData.length);
