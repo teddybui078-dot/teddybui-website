@@ -16,8 +16,8 @@ const INTRO = [
 
 export default function AboutPage() {
   return (
-    <PageShell title="About">
-      <div className="max-w-[600px] space-y-6">
+    <PageShell title="About" maxWidthClass="max-w-[680px]">
+      <div className="space-y-6">
         {INTRO.map((para, i) => (
           <Reveal key={i} delay={0.04 * i}>
             <p className="text-lg leading-relaxed text-ink-700">{para}</p>
