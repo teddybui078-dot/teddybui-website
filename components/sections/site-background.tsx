@@ -1,10 +1,10 @@
 import { BGPattern } from "@/components/ui/bg-pattern";
 
 /**
- * Full-page background for the home route. Fixed behind all content: a clean
- * white→green vertical gradient with a subtle dot pattern. Blends into the footer.
+ * Single site-wide background (rendered once in the root layout): a white→green
+ * vertical gradient with a subtle dot pattern. Fixed behind all content.
  */
-export function HomeBackground() {
+export function SiteBackground() {
   return (
     <div aria-hidden className="pointer-events-none fixed inset-0 -z-10">
       <div
@@ -18,7 +18,7 @@ export function HomeBackground() {
         variant="dots"
         mask="fade-center"
         size={22}
-        fill="rgba(10,13,16,0.16)"
+        fill="rgba(10,13,16,0.13)"
         className="z-0"
       />
     </div>

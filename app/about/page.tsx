@@ -1,19 +1,11 @@
 import type { Metadata } from "next";
 import { PageShell } from "@/components/layout/page-shell";
-import { PageBackground } from "@/components/sections/page-background";
 import { Reveal } from "@/components/ui/scroll-reveal";
 
 export const metadata: Metadata = {
   title: "About",
   description: "How Meridian Labs works — a studio, not a startup.",
 };
-
-// Green pooled along the left & right edges, white through the centre.
-const ABOUT_BG = [
-  "radial-gradient(42% 80% at -4% 40%, rgba(28,191,101,0.36), transparent 62%)",
-  "radial-gradient(42% 80% at 104% 60%, rgba(28,191,101,0.36), transparent 62%)",
-  "linear-gradient(180deg, rgba(28,191,101,0.05) 0%, #ffffff 30%, #ffffff 100%)",
-].join(", ");
 
 const NARRATIVE = [
   "Meridian Labs is a studio, not a startup. We launch many small things and let the good ones compound, rather than betting the company on a single roadmap.",
@@ -30,9 +22,7 @@ const VALUES = [
 
 export default function AboutPage() {
   return (
-    <>
-      <PageBackground gradient={ABOUT_BG} />
-      <PageShell title="About" subtitle="A studio for the people who build.">
+    <PageShell title="About" subtitle="A studio for the people who build.">
       <div className="max-w-[60ch] space-y-6">
         {NARRATIVE.map((para, i) => (
           <Reveal key={i} delay={0.04 * i}>
@@ -59,7 +49,6 @@ export default function AboutPage() {
           ))}
         </dl>
       </div>
-      </PageShell>
-    </>
+    </PageShell>
   );
 }
