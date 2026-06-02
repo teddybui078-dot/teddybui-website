@@ -4,6 +4,7 @@ import { ArrowRight, Link, Zap } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
 interface TimelineItem {
   id: number;
@@ -23,12 +24,15 @@ interface RadialOrbitalTimelineProps {
   centerContent?: React.ReactNode;
   /** Small uppercase label shown beneath the central node. */
   centerLabel?: string;
+  /** Override the root container classes (e.g. height) — merged via cn. */
+  className?: string;
 }
 
 export default function RadialOrbitalTimeline({
   timelineData,
   centerContent,
   centerLabel,
+  className,
 }: RadialOrbitalTimelineProps) {
   const [expandedItems, setExpandedItems] = useState<Record<number, boolean>>(
     {}
@@ -165,7 +169,10 @@ export default function RadialOrbitalTimeline({
 
   return (
     <div
-      className="w-full h-screen flex flex-col items-center justify-center bg-transparent overflow-hidden"
+      className={cn(
+        "w-full h-screen flex flex-col items-center justify-center bg-transparent overflow-hidden",
+        className
+      )}
       ref={containerRef}
       onClick={handleContainerClick}
     >
