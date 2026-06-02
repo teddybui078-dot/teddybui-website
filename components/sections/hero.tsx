@@ -57,7 +57,7 @@ export function Hero() {
     <RadialOrbitalTimeline
       timelineData={timelineData}
       centerLabel="Meridian Labs"
-      centerContent={<Logo className="size-8 drop-shadow-[0_2px_10px_rgba(28,191,101,0.6)]" />}
+      centerContent={<Logo className="size-11 drop-shadow-[0_2px_10px_rgba(28,191,101,0.6)]" />}
     />
   );
 }
