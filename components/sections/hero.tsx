@@ -29,30 +29,27 @@ export function Hero() {
         </motion.div>
 
         {/* semantic heading for a11y/SEO; the visual headline is the typewriter */}
-        <h1 className="sr-only">We build AI tools people actually use.</h1>
+        <h1 className="sr-only">Building cool AI projects.</h1>
         <TypewriterEffect
           words={[
-            { text: "We" },
-            { text: "build" },
+            { text: "Building" },
+            { text: "cool", className: "text-emerald-600 dark:text-emerald-600" },
             { text: "AI" },
-            { text: "tools" },
-            { text: "people" },
-            { text: "actually", className: "text-emerald-300 dark:text-emerald-300" },
-            { text: "use." },
+            { text: "projects." },
           ]}
-          className="mt-8 text-[clamp(2.4rem,6.5vw,4.4rem)] font-semibold leading-[1.0] tracking-[-0.04em]"
-          cursorClassName="bg-emerald-400 h-7 md:h-9 lg:h-12"
+          className="mt-8 text-[clamp(2.6rem,7vw,5rem)] font-semibold leading-[1.0] tracking-[-0.04em]"
+          cursorClassName="bg-emerald-500 h-7 md:h-9 lg:h-12"
         />
 
-        {/* green pill CTA */}
+        {/* dark pill CTA */}
         <motion.div custom={1} variants={fade} initial="hidden" animate="show" className="mt-10">
           <Link
             href="/projects"
-            className="group inline-flex items-center gap-2.5 rounded-full bg-emerald-400 py-3 pl-6 pr-3 text-sm font-semibold text-ink-950 shadow-[0_14px_40px_-10px_rgba(28,191,101,0.6),inset_0_1px_0_rgba(255,255,255,0.3)] transition-colors hover:bg-emerald-300"
+            className="group inline-flex items-center gap-2.5 rounded-full bg-ink-950 py-3 pl-6 pr-3 text-sm font-medium text-white shadow-[0_12px_30px_-10px_rgba(10,13,16,0.5)] transition-colors hover:bg-ink-800"
           >
             View Projects
-            <span className="grid size-7 place-items-center rounded-full bg-ink-950/15 transition-transform duration-300 ease-[var(--ease-out-quint)] group-hover:translate-x-0.5">
-              <Play weight="fill" className="size-3 text-ink-950" />
+            <span className="grid size-7 place-items-center rounded-full bg-white/15 transition-transform duration-300 ease-[var(--ease-out-quint)] group-hover:translate-x-0.5">
+              <Play weight="fill" className="size-3 text-white" />
             </span>
           </Link>
         </motion.div>
