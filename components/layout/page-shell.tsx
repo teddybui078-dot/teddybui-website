@@ -18,13 +18,13 @@ export function PageShell({
     <div className="mx-auto w-full max-w-[1100px] px-6 pb-28 pt-32 md:pt-40">
       <header>
         <Reveal>
-          <h1 className="text-3xl font-semibold tracking-tight text-ink-50 md:text-4xl">
+          <h1 className="text-3xl font-semibold tracking-tight text-ink-950 md:text-4xl">
             {title}
           </h1>
         </Reveal>
         {subtitle && (
           <Reveal delay={0.05}>
-            <p className="mt-2 text-sm text-ink-400 md:text-[15px]">{subtitle}</p>
+            <p className="mt-2 text-sm text-ink-500 md:text-[15px]">{subtitle}</p>
           </Reveal>
         )}
       </header>

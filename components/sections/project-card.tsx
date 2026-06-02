@@ -20,21 +20,21 @@ export function ProjectCard({
         className="group flex h-full flex-col"
       >
         {/* preview */}
-        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] transition-colors duration-300 group-hover:border-emerald-400/30">
+        <div className="relative overflow-hidden rounded-2xl border border-ink-950/[0.07] bg-white shadow-[0_1px_2px_rgba(10,13,16,0.04),0_12px_30px_-18px_rgba(10,13,16,0.18)] transition-shadow duration-300 group-hover:shadow-[0_2px_4px_rgba(10,13,16,0.05),0_22px_50px_-22px_rgba(28,191,101,0.4)]">
           <div className="flex items-center gap-1.5 px-4 pt-4">
-            <span className="size-2 rounded-full bg-white/15" />
-            <span className="size-2 rounded-full bg-white/15" />
-            <span className="size-2 rounded-full bg-white/15" />
+            <span className="size-2 rounded-full bg-ink-950/10" />
+            <span className="size-2 rounded-full bg-ink-950/10" />
+            <span className="size-2 rounded-full bg-ink-950/10" />
           </div>
 
           <div className="relative grid h-44 place-items-center">
-            {/* green glow */}
+            {/* green wash */}
             <div
               aria-hidden
               className="pointer-events-none absolute inset-x-0 bottom-0 h-32"
               style={{
                 background:
-                  "radial-gradient(120% 90% at 50% 130%, rgba(28,191,101,0.42), rgba(28,191,101,0) 60%)",
+                  "radial-gradient(120% 90% at 50% 130%, rgba(28,191,101,0.28), rgba(28,191,101,0) 60%)",
               }}
             />
             <div
@@ -42,10 +42,10 @@ export function ProjectCard({
               className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
               style={{
                 background:
-                  "radial-gradient(120% 90% at 50% 130%, rgba(28,191,101,0.32), rgba(28,191,101,0) 55%)",
+                  "radial-gradient(120% 90% at 50% 130%, rgba(28,191,101,0.22), rgba(28,191,101,0) 55%)",
               }}
             />
-            <span className="relative grid size-14 place-items-center rounded-2xl border border-emerald-400/30 bg-ink-950/60 text-2xl font-semibold tracking-tight text-emerald-300 shadow-[0_10px_30px_-8px_rgba(28,191,101,0.6)]">
+            <span className="relative grid size-14 place-items-center rounded-2xl border border-emerald-400/30 bg-emerald-50 text-2xl font-semibold tracking-tight text-emerald-600 shadow-[0_8px_24px_-10px_rgba(28,191,101,0.5)]">
               {project.name.charAt(0)}
             </span>
           </div>
@@ -54,18 +54,18 @@ export function ProjectCard({
         {/* name + one-liner */}
         <div className="mt-4 px-1">
           <div className="flex items-center gap-1.5">
-            <h3 className="text-[15px] font-semibold tracking-tight text-ink-50">
+            <h3 className="text-[15px] font-semibold tracking-tight text-ink-950">
               {project.name}
             </h3>
             <ArrowUpRight
               weight="bold"
               className={cn(
                 "size-3.5 text-ink-400 transition-all duration-300 ease-[var(--ease-out-quint)]",
-                "opacity-0 -translate-x-1 group-hover:translate-x-0 group-hover:opacity-100 group-hover:text-emerald-300",
+                "opacity-0 -translate-x-1 group-hover:translate-x-0 group-hover:opacity-100 group-hover:text-emerald-600",
               )}
             />
           </div>
-          <p className="mt-1 text-sm text-ink-400">{project.oneLiner}</p>
+          <p className="mt-1 text-sm text-ink-500">{project.oneLiner}</p>
         </div>
       </a>
     </Reveal>

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
-/* Drive the `dark:` variant from the `.dark` class (the site is always dark),
-   not the OS preference — Tailwind v4 defaults to the media query otherwise. */
+/* Gate the `dark:` variant on a `.dark` class (which this light theme never
+   sets) so OS dark-mode doesn't flip component `dark:` utilities. */
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
@@ -42,8 +42,8 @@
 }
 
 :root {
-  --background: var(--color-ink-950);
-  --foreground: var(--color-ink-50);
+  --background: #ffffff;
+  --foreground: var(--color-ink-950);
 }
 
 html,
@@ -55,19 +55,18 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Dark base — green glows bleeding in from the edges (site-wide) */
+/* Light base wash — a whisper of green at the top, white everywhere else */
 body {
   background:
-    radial-gradient(1100px 600px at 84% -10%, rgba(28, 191, 101, 0.14), transparent 60%),
-    radial-gradient(900px 720px at -5% 45%, rgba(28, 191, 101, 0.08), transparent 55%),
-    var(--color-ink-950);
+    radial-gradient(1200px 620px at 50% -22%, rgba(28, 191, 101, 0.06), transparent 62%),
+    #ffffff;
 }
 
-/* Faint hairline grid (dark surfaces) */
+/* Faint hairline grid (light surfaces) */
 .grid-overlay {
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgba(10, 13, 16, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(10, 13, 16, 0.045) 1px, transparent 1px);
   background-size: 64px 64px;
 }
 
@@ -98,7 +97,7 @@ button:active,
 
 ::selection {
   background: var(--color-emerald-400);
-  color: var(--color-ink-950);
+  color: #ffffff;
 }
 
 ::-webkit-scrollbar {
@@ -109,9 +108,9 @@ button:active,
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(10, 13, 16, 0.14);
   border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.22);
+  background: rgba(10, 13, 16, 0.26);
 }

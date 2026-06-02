@@ -19,7 +19,7 @@ export default function LinksPage() {
             <h2 className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink-400">
               {group.title}
             </h2>
-            <ul className="mt-3 divide-y divide-white/[0.06] border-t border-white/[0.06]">
+            <ul className="mt-3 divide-y divide-ink-950/[0.06] border-t border-ink-950/[0.06]">
               {group.items.map((item, i) => (
                 <Reveal key={item.label} delay={0.03 * i} as="li">
                   <LinkRow item={item} />
@@ -37,7 +37,7 @@ function LinkRow({ item }: { item: LinkItem }) {
   const inner = (
     <>
       <div>
-        <div className="text-[15px] font-medium text-ink-100 transition-colors group-hover:text-emerald-300">
+        <div className="text-[15px] font-medium text-ink-900 transition-colors group-hover:text-emerald-600">
           {item.label}
         </div>
         <div className="mt-0.5 text-[13px] text-ink-500">{item.description}</div>
@@ -45,12 +45,12 @@ function LinkRow({ item }: { item: LinkItem }) {
       {item.external ? (
         <ArrowUpRight
           weight="bold"
-          className="size-4 text-ink-500 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-emerald-300"
+          className="size-4 text-ink-400 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-emerald-600"
         />
       ) : (
         <ArrowRight
           weight="bold"
-          className="size-4 text-ink-500 transition-all duration-300 group-hover:translate-x-0.5 group-hover:text-emerald-300"
+          className="size-4 text-ink-400 transition-all duration-300 group-hover:translate-x-0.5 group-hover:text-emerald-600"
         />
       )}
     </>

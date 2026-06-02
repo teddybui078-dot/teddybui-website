@@ -42,7 +42,7 @@ export default async function PostPage({
       <Reveal>
         <Link
           href="/blog"
-          className="group inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.16em] text-ink-400 transition-colors hover:text-ink-100"
+          className="group inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.16em] text-ink-400 transition-colors hover:text-ink-900"
         >
           <ArrowLeft
             weight="bold"
@@ -52,18 +52,18 @@ export default async function PostPage({
         </Link>
       </Reveal>
 
-      <header className="mt-8 border-b border-white/[0.08] pb-10">
+      <header className="mt-8 border-b border-ink-950/[0.08] pb-10">
         <Reveal delay={0.05}>
           <div className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.16em] text-ink-500">
-            <span className="text-emerald-300">{post.category}</span>
-            <span className="text-ink-600">·</span>
+            <span className="text-emerald-600">{post.category}</span>
+            <span className="text-ink-300">·</span>
             <time dateTime={post.date}>{formatDate(post.date)}</time>
-            <span className="text-ink-600">·</span>
+            <span className="text-ink-300">·</span>
             <span>{post.readingTime}</span>
           </div>
         </Reveal>
         <Reveal delay={0.1}>
-          <h1 className="mt-5 text-[clamp(2rem,5vw,3.2rem)] font-semibold leading-[1.02] tracking-[-0.03em] text-ink-50">
+          <h1 className="mt-5 text-[clamp(2rem,5vw,3.2rem)] font-semibold leading-[1.02] tracking-[-0.03em] text-ink-950">
             {post.title}
           </h1>
         </Reveal>
@@ -72,15 +72,15 @@ export default async function PostPage({
       <div className="mt-10 space-y-6">
         {post.body.map((para, i) => (
           <Reveal key={i} delay={0.03 * i}>
-            <p className="text-[17px] leading-[1.75] text-ink-200">{para}</p>
+            <p className="text-[17px] leading-[1.75] text-ink-700">{para}</p>
           </Reveal>
         ))}
       </div>
 
-      <footer className="mt-16 border-t border-white/[0.08] pt-8">
+      <footer className="mt-16 border-t border-ink-950/[0.08] pt-8">
         <Link
           href="/blog"
-          className="group inline-flex items-center gap-2 text-sm text-ink-300 transition-colors hover:text-ink-50"
+          className="group inline-flex items-center gap-2 text-sm text-ink-500 transition-colors hover:text-ink-950"
         >
           <ArrowLeft
             weight="bold"

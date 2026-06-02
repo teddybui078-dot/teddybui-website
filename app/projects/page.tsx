@@ -17,7 +17,7 @@ export default function ProjectsPage() {
         ))}
       </div>
 
-      <p className="mt-20 text-center text-sm text-ink-500">More projects coming…</p>
+      <p className="mt-20 text-center text-sm text-ink-400">More projects coming…</p>
     </PageShell>
   );
 }
