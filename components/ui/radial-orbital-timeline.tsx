@@ -94,7 +94,7 @@ export default function RadialOrbitalTimeline({
     if (autoRotate && viewMode === "orbital") {
       rotationTimer = setInterval(() => {
         setRotationAngle((prev) => {
-          const newAngle = (prev + 0.3) % 360;
+          const newAngle = (prev + 0.36) % 360;
           return Number(newAngle.toFixed(3));
         });
       }, 50);
