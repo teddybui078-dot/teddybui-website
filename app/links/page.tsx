@@ -13,22 +13,15 @@ export const metadata: Metadata = {
 export default function LinksPage() {
   return (
     <PageShell title="Links" subtitle="Find us, and everything we keep in the open." maxWidthClass="max-w-[680px]">
-      <div className="space-y-12">
-        {linkGroups.map((group) => (
-          <section key={group.title}>
-            <h2 className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink-400">
-              {group.title}
-            </h2>
-            <ul className="mt-3 divide-y divide-ink-950/[0.06] border-t border-ink-950/[0.06]">
-              {group.items.map((item, i) => (
-                <Reveal key={item.label} delay={0.03 * i} as="li">
-                  <LinkRow item={item} />
-                </Reveal>
-              ))}
-            </ul>
-          </section>
-        ))}
-      </div>
+      <ul className="divide-y divide-ink-950/[0.06] border-t border-ink-950/[0.06]">
+        {linkGroups
+          .flatMap((group) => group.items)
+          .map((item, i) => (
+            <Reveal key={item.label} delay={0.03 * i} as="li">
+              <LinkRow item={item} />
+            </Reveal>
+          ))}
+      </ul>
     </PageShell>
   );
 }
