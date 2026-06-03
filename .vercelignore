@@ -1,0 +1,13 @@
+# Never upload secrets to the build context
+.env
+.env.*
+
+# Build / local artifacts (also ignored by default, listed for safety)
+node_modules
+.next
+.git
+.vercel
+
+# Root-only reference media / design drops (not part of the site; keep public/ intact)
+/*.png
+/*.mov
