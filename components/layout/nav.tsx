@@ -27,12 +27,9 @@ export function Nav() {
         <Link
           href="/"
           aria-label={site.name}
-          className="flex items-center gap-2 pl-1.5 pr-1"
+          className="flex items-center px-1.5"
         >
           <Logo className="h-4 w-auto" />
-          <span className="text-[14px] font-semibold tracking-tight text-ink-950">
-            Teddy Bui
-          </span>
         </Link>
 
         <span className="mx-1 h-5 w-px bg-ink-950/10" aria-hidden />
