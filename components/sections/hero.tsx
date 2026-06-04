@@ -80,7 +80,7 @@ export function Hero() {
           <TypewriterEffect
             words={[
               { text: "Building" },
-              { text: "aspiring", className: "text-emerald-600 dark:text-emerald-600" },
+              { text: "aspiring", className: "italic font-serif tracking-tight" },
               { text: "AI" },
               { text: "projects." },
             ]}
