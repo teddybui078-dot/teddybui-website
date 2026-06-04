@@ -107,11 +107,11 @@ export function Hero() {
           >
             <Link
               href="/projects"
-              className="group inline-flex items-center gap-2.5 rounded-full bg-ink-950 py-3 pl-6 pr-3 text-sm font-medium text-white shadow-[0_12px_30px_-10px_rgba(10,13,16,0.5)] transition-colors hover:bg-ink-800"
+              className="group inline-flex items-center gap-3 rounded-full bg-ink-950 py-4 pl-8 pr-4 text-base font-semibold text-white shadow-[0_18px_40px_-12px_rgba(22,18,13,0.55)] transition-all duration-300 ease-[var(--ease-out-quint)] hover:-translate-y-0.5 hover:bg-ink-800 hover:shadow-[0_26px_54px_-12px_rgba(22,18,13,0.6)]"
             >
               View Projects
-              <span className="grid size-7 place-items-center rounded-full bg-white/15 transition-transform duration-300 ease-[var(--ease-out-quint)] group-hover:translate-x-0.5">
-                <Play weight="fill" className="size-3 text-white" />
+              <span className="grid size-9 place-items-center rounded-full bg-white/15 transition-transform duration-300 ease-[var(--ease-out-quint)] group-hover:translate-x-0.5">
+                <Play weight="fill" className="size-3.5 text-white" />
               </span>
             </Link>
             <Link
