@@ -84,7 +84,7 @@ export function Hero() {
               { text: "AI" },
               { text: "projects." },
             ]}
-            className="text-[clamp(2.4rem,6vw,4.5rem)] font-semibold leading-[1.0] tracking-[-0.04em]"
+            className="whitespace-nowrap text-[clamp(2.4rem,6vw,4.5rem)] font-semibold leading-[1.0] tracking-[-0.04em]"
             cursorClassName="bg-emerald-500 h-7 md:h-9 lg:h-11"
           />
 
