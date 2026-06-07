@@ -8,6 +8,7 @@ import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { Reveal } from "@/components/ui/scroll-reveal";
 import { HubCard } from "@/components/ui/hub-card";
 import { sectionCards, socialCards } from "@/lib/data/hub";
+import { projects } from "@/lib/data/projects";
 import { site } from "@/lib/data/site";
 
 const EASE = [0.23, 1, 0.32, 1] as const;
@@ -22,7 +23,8 @@ const fade = {
   }),
 };
 
-const [projects, ...restSections] = sectionCards;
+const [featuredCard, ...restSections] = sectionCards;
+const projectPreview = projects.slice(0, 5);
 
 export function Hub() {
   return (
@@ -96,7 +98,23 @@ export function Hub() {
       <div className="mt-16 lg:mt-20">
         <div className="grid gap-4 lg:grid-cols-3 lg:grid-rows-2">
           <Reveal className="h-full lg:col-span-2 lg:row-span-2">
-            <HubCard card={projects} className="h-full" />
+            <HubCard card={featuredCard} className="h-full">
+              <ul className="divide-y divide-ink-950/[0.07] border-y border-ink-950/[0.07]">
+                {projectPreview.map((p) => (
+                  <li
+                    key={p.slug}
+                    className="flex items-baseline justify-between gap-4 py-3"
+                  >
+                    <span className="text-[15px] font-medium tracking-tight text-ink-900">
+                      {p.name}
+                    </span>
+                    <span className="shrink-0 text-xs text-ink-400">
+                      {p.category}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </HubCard>
           </Reveal>
           {restSections.map((card, i) => (
             <Reveal key={card.title} delay={0.06 * (i + 1)} className="h-full">

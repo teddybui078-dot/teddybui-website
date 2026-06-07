@@ -14,9 +14,13 @@ import type { HubCard as HubCardData } from "@/lib/data/hub";
 export function HubCard({
   card,
   className,
+  children,
 }: {
   card: HubCardData;
   className?: string;
+  /** Optional content slot rendered between the copy and the CTA — used to
+   *  fill a tall featured card (e.g. a project preview list). */
+  children?: React.ReactNode;
 }) {
   const { title, description, href, cta, icon: Icon, external, featured, brand } = card;
 
@@ -55,7 +59,8 @@ export function HubCard({
         <div
           className={cn(
             "relative flex h-full flex-col rounded-[calc(1.75rem-0.375rem)] border border-ink-950/[0.06] bg-card",
-            featured ? "justify-center gap-5 p-7 sm:p-9" : "gap-4 p-6",
+            featured ? "gap-5 p-7 sm:p-9" : "gap-4 p-6",
+            featured && !children && "justify-center",
           )}
         >
           {/* icon tile */}
@@ -73,7 +78,7 @@ export function HubCard({
             />
           </span>
 
-          <div className={cn("flex flex-col", !featured && "flex-1")}>
+          <div className={cn("flex flex-col", !featured && !children && "flex-1")}>
             <h3
               className={cn(
                 "font-semibold tracking-[-0.02em] text-ink-950",
@@ -91,6 +96,8 @@ export function HubCard({
               {description}
             </p>
           </div>
+
+          {children && <div className="flex-1">{children}</div>}
 
           {/* CTA */}
           {featured ? (
