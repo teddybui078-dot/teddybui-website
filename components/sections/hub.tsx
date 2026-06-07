@@ -95,7 +95,7 @@ export function Hub() {
       </div>
 
       {/* ── Card grid hub ─────────────────────────────────────────── */}
-      <div className="mt-16 lg:mt-20">
+      <div className="mt-12 lg:mt-14">
         <div className="grid gap-4 lg:grid-cols-3 lg:grid-rows-2">
           <Reveal className="h-full lg:col-span-2 lg:row-span-2">
             <HubCard card={featuredCard} className="h-full">
