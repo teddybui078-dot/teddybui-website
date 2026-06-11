@@ -27,4 +27,28 @@ export const socials: Social[] = [
     href: "https://instagram.com",
     brand: "#E4405F",
   },
+  {
+    platform: "YouTube",
+    handle: "@teddybui",
+    href: "https://youtube.com",
+    brand: "#FF0000",
+  },
+  {
+    platform: "TikTok",
+    handle: "@teddybui",
+    href: "https://tiktok.com",
+    brand: "#000000",
+  },
+  {
+    platform: "LinkedIn",
+    handle: "Teddy Bui",
+    href: "https://linkedin.com",
+    brand: "#0A66C2",
+  },
+  {
+    platform: "Discord",
+    handle: "@teddybui",
+    href: "https://discord.com",
+    brand: "#5865F2",
+  },
 ];

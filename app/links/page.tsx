@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { FaGithub, FaXTwitter, FaInstagram } from "react-icons/fa6";
+import {
+  FaGithub,
+  FaXTwitter,
+  FaInstagram,
+  FaYoutube,
+  FaTiktok,
+  FaLinkedin,
+  FaDiscord,
+} from "react-icons/fa6";
 import { PageShell } from "@/components/layout/page-shell";
 import { Reveal } from "@/components/ui/scroll-reveal";
 import { SocialCard } from "@/components/ui/social-card";
@@ -16,6 +24,10 @@ const ICONS: Record<string, ReactNode> = {
   "X / Twitter": <FaXTwitter className="size-[20px]" />,
   GitHub: <FaGithub className="size-[20px]" />,
   Instagram: <FaInstagram className="size-[20px]" />,
+  YouTube: <FaYoutube className="size-[20px]" />,
+  TikTok: <FaTiktok className="size-[20px]" />,
+  LinkedIn: <FaLinkedin className="size-[20px]" />,
+  Discord: <FaDiscord className="size-[20px]" />,
 };
 
 export default function LinksPage() {
