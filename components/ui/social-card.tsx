@@ -48,10 +48,10 @@ export function SocialCard({
 
       <div className="relative z-10 flex items-center gap-4">
         {/* circular brand disc */}
-        <span className="relative grid size-12 shrink-0 place-items-center rounded-full border border-ink-950/[0.1] bg-cream text-ink-700 shadow-[inset_0_1px_0_rgba(255,255,255,0.6)] transition-colors duration-300 group-hover:[color:var(--brand)]">
+        <span className="relative grid size-12 shrink-0 place-items-center rounded-full border border-ink-950/[0.1] bg-cream [color:var(--brand)] shadow-[inset_0_1px_0_rgba(255,255,255,0.6)]">
           <span
             aria-hidden
-            className="pointer-events-none absolute inset-[4px] rounded-full border border-ink-950/[0.05] transition-colors duration-300 group-hover:border-[color:var(--brand)]/20"
+            className="pointer-events-none absolute inset-[4px] rounded-full border border-[color:var(--brand)]/15 transition-colors duration-300 group-hover:border-[color:var(--brand)]/30"
           />
           {icon}
         </span>
